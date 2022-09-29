@@ -1,9 +1,3 @@
 {
-  "compras": [
-    {
-      "id": 1,
-      "item": "Arroz",
-      "quantidade": 5
-    }
-  ]
+  "compras": []
 }

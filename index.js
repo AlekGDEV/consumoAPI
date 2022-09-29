@@ -20,6 +20,11 @@ function inserir(){
 }
 
 async function excluir(id){
+    let resposta = confirm('Você tem certeza?');
+    if(resposta !== true){
+        return;
+    }
+
     await fetch('http://localhost:8000/compras/'+id,{
         method:'DELETE'
     });
@@ -42,7 +47,8 @@ function atualizar_lista(){
                     <td>${cada_item.item}</td>
                     <td>${cada_item.quantidade}</td>
                     <td>
-                        <button class="btn btn-danger" onclick="excluir(${cada_item.id})">Excluir</button>
+                        <button class="btn btn-warning btn-control btn-sm" onclick="editar()">Editar</button>
+                        <button class="btn btn-danger btn-control btn-sm" onclick="excluir(${cada_item.id})">Excluir</button>
                     </td>
                 </tr>
                 `
