@@ -43,12 +43,35 @@
                             <input type="text" id="item" placeholder="Item" class="form-control mb-3">
                             <input type="number" id="quantidade" placeholder="Quantidade" min="1" class="form-control">
                     </div>
+                    
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                         <button type="submit" class="btn btn-primary">Adicionar</button>
                     </div>
                 </form>
             </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEditar" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Editar item</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form onsubmit="editar()" id="form_editar">
+                <input type="hidden" id="editar_id">
+
+                <label for="editar_item">Nome do item</label>
+                <input class="form-control mb-3" id="editar_item" type="">
+
+                <label for="editar_quantidade">Quantidade</label>
+                <input class="form-control mb-3" id="editar_quantidade" type="text">
+
+                <div class="d-grid">
+                    <button class="btn btn-primary btn-control">Enviar</button>
+                </div>
+            </form>
         </div>
     </div>
 

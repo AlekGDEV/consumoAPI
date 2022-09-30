@@ -1,3 +1,9 @@
 {
-  "compras": []
+  "compras": [
+    {
+      "item": "ssd",
+      "quantidade": "34",
+      "id": 1
+    }
+  ]
 }
